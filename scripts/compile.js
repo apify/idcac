@@ -40,16 +40,16 @@ class AST {
 
 (async () => {
   const sink = fs.createWriteStream(__dirname + '/../compiled.js', { flags: 'w' });
-  
+
+  sink.write('try {\n');
 
   const rules = fs.readFileSync(__dirname + '/../extension/data/rules.js', 'utf-8');
   const rulesUpdated = new AST(rules, { sourceType: 'module' })
-    .makeVariableDeclarationsConst()
+    .makeVariableDeclarationsConst() // make all `var` declarations `const`, so they are automatically dropped as soon as the script ends.
     .dropSymbol('block_urls')
     .generate();
-
-  sink.write('try {\n');
   sink.write(rulesUpdated);
+
   sink.write('\n');
   
   sink.write('const files = {\n');
