@@ -6,7 +6,7 @@ This package contains the I don't care about cookies extension compiled for use 
 
 ```typescript
 import { chromium } from 'playwright'; // works with Firefox too!
-import { getExtensionPath } from 'playwright-idontcareaboutcookies';
+import { getExtensionPath } from 'idcac-playwright';
 
 (async () => {
     const b = await chromium.launch({
