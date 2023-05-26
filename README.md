@@ -1,12 +1,12 @@
 # I Don't Care About Cookies for Playwright/Puppeteer
 
-This package contains the I don't care about cookies extension compiled for use with Playwright or Puppeteer.
+This package contains the [I don't care about cookies](https://addons.mozilla.org/cs/firefox/addon/i-dont-care-about-cookies/) browser extension compiled for use with Playwright or Puppeteer.
 
 ## Usage
 
 ```typescript
 import { chromium } from 'playwright'; // works with Firefox too!
-import { getExtensionPath } from 'idcac-playwright';
+import { getInjectableScript } from 'idcac-playwright';
 
 (async () => {
     const b = await chromium.launch({
@@ -19,7 +19,7 @@ import { getExtensionPath } from 'idcac-playwright';
     await p.goto('https://google.com');
 
     // Inject the extension (you can cache the file to avoid repeated reads)
-    await p.evaluate(fs.readFileSync(getExtensionPath(), 'utf8'));
+    await p.evaluate(getInjectableScript());
 
     // Enjoy your webpage without annoying cookie modals!
 })();

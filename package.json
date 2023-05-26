@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "description": "I Don't Care About Cookies for Playwright/Puppeteer",
   "main": "index.js",
+  "licenses": [
+    {
+      "type": "GNU General Public License v3.0",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.html"
+    }
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
