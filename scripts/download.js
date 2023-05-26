@@ -1,7 +1,5 @@
 const axios = require('axios').default;
 const cheerio = require('cheerio');
-const fs = require('fs');
-const admZip = require('adm-zip');
 const AdmZip = require('adm-zip');
 
 const url = 'https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/versions/';
@@ -12,9 +10,8 @@ axios(url).then(async (response) => {
 
     const x = await axios(url, {
         responseType: 'arraybuffer'
-    }).then(x => x.data);
+    }).then(x => x.data)
 
     const unzipper = new AdmZip(x);
-
-    unzipper.extractAllTo('../extension', true);
+    unzipper.extractAllTo(__dirname + '/../extension', true);
 }).catch(console.error);
