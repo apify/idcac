@@ -18,7 +18,7 @@ import { getInjectableScript } from 'idcac-playwright';
 
     await p.goto('https://google.com');
 
-    // Inject the extension (you can cache the file to avoid repeated reads)
+    // Inject the extension as a client-side script
     await p.evaluate(getInjectableScript());
 
     // Enjoy your webpage without annoying cookie modals!
