@@ -1,6 +1,6 @@
 {
   "name": "idcac-playwright",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "I Don't Care About Cookies for Playwright/Puppeteer",
   "main": "index.js",
   "licenses": [
@@ -17,7 +17,11 @@
     "url": "https://github.com/apify/idcac"
   },
   "homepage": "https://github.com/apify/idcac",
-  "keywords": ["playwright", "puppeteer", "cookies"],
+  "keywords": [
+    "playwright",
+    "puppeteer",
+    "cookies"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
