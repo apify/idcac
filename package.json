@@ -1,6 +1,6 @@
 {
   "name": "idcac-playwright",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "I Don't Care About Cookies for Playwright/Puppeteer",
   "main": "index.js",
   "licenses": [
